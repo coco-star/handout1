@@ -1,5 +1,7 @@
 body{
     color: #333333;
+    font-family: "游ゴシック";    
+
 }
 
 
@@ -23,7 +25,7 @@ body{
 }
 
 
-.header h1{
+.header h2{
     font-size: 18px;
     width: 151px;
     background-color: #FFE000;
@@ -38,14 +40,15 @@ body{
     max-width: 1080px;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
 }
 
-.heading-wrapper{
-    margin-top: auto;
-    margin-bottom: auto;
-}
 
-.heading-wrapper h1{
+
+.heading-wrapper h2{
     font-size: 36px;
     margin-bottom: 34px;
 }
@@ -58,11 +61,6 @@ body{
 
 .heading-btn{
     display: flex;
-}
-
-.heading-inner{
-    display: flex;
-
 }
 
 .heading-btn-1{
@@ -92,6 +90,8 @@ body{
 
 .mv img{
     width: 560px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 
@@ -99,7 +99,6 @@ body{
     font-size: 36px;
     font-weight: bold;
     text-align: center;
-    margin-top: 120px;
     display: flex;
     align-items: center;
     max-width: 660px;
@@ -126,13 +125,13 @@ body{
     margin-right: auto;
     margin-left: auto;
 }
-.service-inner{
-    margin-top: 109px;
-}
+
 
 .service-box-wrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 479px;
 }
 .service-box{
     margin:0 50px;
@@ -151,18 +150,21 @@ body{
 }
 
 
-.about-box-wrapper{
-    flex-flow: row-reverse;
+.about-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 876px;
 }
 
 .about-box{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
 }
 
 .about-box:nth-child(odd){
     flex-direction: row-reverse;
+    margin-bottom: 100px;
 }
 
 .about-box:nth-child(odd) .about-txt{
@@ -196,7 +198,8 @@ body{
 
 .about-box img{
     width: 450px;
-    height: 278px;
+    max-width: 100%;
+    margin: 0 auto;
     box-shadow: 0px 11px 20px #00000029;
 }
 
@@ -272,7 +275,7 @@ body{
 
 .news-btn{
     font-size: 18px;
-    width: 120px;
+    width: 166px;
     background-color: #109954;
     color: #FFFFFF;
     padding: 10px 0;
@@ -295,6 +298,7 @@ body{
 .footer-top{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 25px;
 }
 
@@ -304,18 +308,7 @@ body{
     display: flex;
 }
 
-.footer-list li{
-    font-size: 14px;
-    color: #333333;
-}
 
-.footer-list p{
-    padding: 0 18px;
-}
-
-.footer-list p,li{
-    line-height: 70px;
-}
 
 .footer-logo img{
     width: 70px;
@@ -333,7 +326,15 @@ body{
 a {
     text-decoration: none ;
     display: block;
+    font-size: 14px;
+    color: #333333;
 }
+
+li + li {
+    border-left: 1px solid #333;
+    margin-left:18px;
+    padding-left: 18px;
+  }
 
 @media screen and (min-width:768px){
     body{
@@ -389,6 +390,13 @@ a {
     .service{
         margin: 0 5%;
     }
+
+    .service-inner{
+        height: 1030px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .service-box-wrapper{
         flex-direction: column;
         align-items: center;
@@ -397,10 +405,21 @@ a {
     .about{
         margin: 0 5%;
     }
+    
+    .about-inner{
+        height: 1271px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+    }
 
     .about-box-wrapper{
         flex-direction: row;
+        min-width: 0;
+        height: 1271px;
     }
+
 
     .about-box,.about-box:nth-child(odd){
         flex-direction: column;
@@ -409,7 +428,8 @@ a {
         margin-top: 70px;
     }
     .about-box img{
-        width: 100%;
+        max-width: 100%;
+        width: 450px;
         height: auto;
     }
 
@@ -443,6 +463,10 @@ a {
         margin-right: 0;
     }
 
+    .figure{
+        text-align: center;
+    }
+
     .news-txt h2{
         line-height: 1.7;
     }
@@ -464,14 +488,22 @@ a {
         flex-direction: column;
     }
 
-    .footer-list ul p{
-        display: none;
-    }
+    
 
     .footer-list ul li{
-        line-height: 1;
         padding-bottom: 12px;
     }
+
+    .footer-list a{
+        line-height: 1;
+        text-align: center;
+    }
+
+    li + li {
+        border-left: 0;
+        margin-left: 0;
+        padding-left:0;
+      }
 
     .footer-bottom{
         padding-top: 28px;
@@ -484,10 +516,7 @@ a {
     .ttl:after {
         margin-left: 16px;
     }
-    .ttl{
-        margin-top: 100px;
-        margin-bottom: 80px;
-    }
+    
     #wrapper{
         width: 100%;
         overflow: hidden;
